@@ -8,13 +8,8 @@
         var urlPage = document.getElementById('urlPage');
         var setUrl = document.getElementById('setUrl');
 
-        var input = ""
         setUrl.addEventListener("click", () => {
-            let i = urlPage.value
-            window.localStorage.setItem('url', i)
-        })
-        urlPage.addEventListener("change", (e) => {
-            input = urlPage.value
+            window.localStorage.setItem('url', urlPage.value)
         })
     </script>
 </html>

@@ -95,21 +95,18 @@ const createWindow = () => {
 
   const urlSelect = () => {
     mainWindow.loadFile("index.html")
-
     let interval = setInterval(
       () => getUrlItem("url").then(openUrl),
       250
     )
-
     return () => clearInterval(interval)
   }
   let cancel = urlSelect()
 
   readUrl().then(openUrl)
 
-
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
