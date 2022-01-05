@@ -1,0 +1,30 @@
+{
+  "name": "wrapper-app",
+  "version": "0.1.0",
+  "description": "electron wrapper",
+  "main": "./main.js",
+  "homepage": "https://github.com/Alexander89",
+  "repository": "https://github.com/Alexander89/electron-wrapper",
+  "scripts": {
+    "start": "electron ./main.js",
+    "build": "electron-builder --dir",
+    "linux": "electron-builder --linux rpm"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Alexander89",
+    "email": "alex-halemba@gmx.de"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.6",
+    "electron-builder": "^22.14.5"
+  },
+  "build": {
+    "appId": "wrapper.electron.wrapper",
+    "rpm": {
+      "artifactName": "wrapper-app.rpm",
+      "category": "Office"
+    }
+  }
+}
